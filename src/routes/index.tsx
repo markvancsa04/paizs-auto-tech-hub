@@ -397,7 +397,7 @@ function Services() {
     { icon: Car, k: "cars" },
     { icon: Bike, k: "moto" },
     { icon: Truck, k: "trucks" },
-    { icon: Trailer, k: "trailers" },
+    { icon: Caravan, k: "trailers" },
     { icon: Tractor, k: "agri" },
     { icon: Package, k: "comm" },
   ];
