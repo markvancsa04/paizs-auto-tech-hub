@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Phone, MessageCircle, ArrowUp, Menu, X, ChevronDown, Mail, MapPin, Clock, Facebook,
-  Car, Bike, Truck, Trailer, Tractor, Package,
+  Car, Bike, Truck, Caravan, Tractor, Package,
   ShieldCheck, Gauge, Timer, Wallet, Smile, Wrench,
   CalendarCheck, Search, Disc3, Wind, FileCheck2, BadgeCheck,
   Send, Loader2, CheckCircle2, Globe,
