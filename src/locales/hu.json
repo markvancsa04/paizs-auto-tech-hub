@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Kezdőlap",
+    "about": "Rólunk",
+    "services": "Szolgáltatások",
+    "why": "Miért minket",
+    "process": "Folyamat",
+    "contact": "Kapcsolat",
+    "appointment": "Időpontfoglalás",
+    "call": "Hívjon most"
+  },
+  "hero": {
+    "badge": "Engedélyezett ITP állomás",
+    "title": "Professzionális ITP Kézdivásárhelyen",
+    "subtitle": "Gyors, pontos és megbízható műszaki vizsgálat minden járműtípusra. Modern felszereléssel és tapasztalt szakemberekkel várjuk Önt.",
+    "cta1": "Időpontfoglalás",
+    "cta2": "Hívjon most",
+    "scroll": "Görgessen tovább"
+  },
+  "about": {
+    "kicker": "Rólunk",
+    "title": "A régió megbízható ITP állomása",
+    "p1": "Az ITP Paizs DNS Auto SRL több mint egy évtizede áll a helyi és környékbeli sofőrök szolgálatában Kézdivásárhelyen. Küldetésünk, hogy a műszaki vizsgálat gyors, átlátható és stresszmentes élmény legyen.",
+    "p2": "Csapatunk RAR által jóváhagyott, folyamatosan képzett szakemberekből áll. Legmodernebb diagnosztikai berendezéseinkkel a személygépkocsiktól a nehéz teherautókig minden járműtípust kezelünk.",
+    "f1t": "Küldetésünk",
+    "f1d": "Biztonságos járművek a biztonságos utakért.",
+    "f2t": "Tapasztalat",
+    "f2d": "Több mint 10 év szakmai gyakorlat.",
+    "f3t": "Modern felszerelés",
+    "f3d": "Naprakész, kalibrált diagnosztikai eszközök.",
+    "f4t": "Hitelesített vizsgálat",
+    "f4d": "RAR által engedélyezett állomás."
+  },
+  "services": {
+    "kicker": "Szolgáltatások",
+    "title": "Minden járműtípusra",
+    "subtitle": "Teljes körű ITP szolgáltatások egy helyen, professzionális minőségben.",
+    "cta": "Részletek",
+    "items": {
+      "cars": { "t": "Személygépkocsik", "d": "Gyors és pontos műszaki vizsgálat személyautók számára, teljes diagnosztikával." },
+      "moto": { "t": "Motorkerékpárok", "d": "Speciális ITP szolgáltatás motorosoknak, fékek és emisszió ellenőrzésével." },
+      "trucks": { "t": "Teherautók", "d": "Nehéz gépjárművek műszaki vizsgálata modern görgős fékpadon." },
+      "trailers": { "t": "Utánfutók", "d": "Pótkocsik és utánfutók teljes körű ellenőrzése minden kategóriában." },
+      "agri": { "t": "Mezőgazdasági járművek", "d": "Traktorok és mezőgazdasági gépek szakszerű ITP vizsgálata." },
+      "comm": { "t": "Haszongépjárművek", "d": "Kisteherautók és furgonok komplett műszaki átvizsgálása." }
+    }
+  },
+  "why": {
+    "kicker": "Miért válasszon minket",
+    "title": "Kiváló szolgáltatás minden részletben",
+    "items": {
+      "i1": { "t": "Tapasztalt szakemberek", "d": "Képzett és RAR által hitelesített vizsgáztatók." },
+      "i2": { "t": "Modern felszerelés", "d": "Legújabb generációs diagnosztikai gépek." },
+      "i3": { "t": "Gyors vizsgálat", "d": "Átlagosan 30 perc alatt végzünk." },
+      "i4": { "t": "Korrekt árak", "d": "Átlátható, versenyképes díjszabás." },
+      "i5": { "t": "Ügyfél-elégedettség", "d": "98%-os elégedettségi mutató." },
+      "i6": { "t": "Megbízható szerviz", "d": "Pontosság, precizitás, professzionalizmus." }
+    }
+  },
+  "process": {
+    "kicker": "Folyamat",
+    "title": "Így zajlik a vizsgálat",
+    "steps": {
+      "s1": { "t": "Időpontfoglalás", "d": "Foglaljon időpontot telefonon vagy online, várakozás nélkül." },
+      "s2": { "t": "Jármű ellenőrzés", "d": "Vizuális és műszaki átvizsgálás minden alkatrészre kiterjedően." },
+      "s3": { "t": "Féktesztelés", "d": "Görgős fékpadon mért, pontos fékrendszer diagnosztika." },
+      "s4": { "t": "Emissziós teszt", "d": "Károsanyag-kibocsátás precíz mérése hitelesített eszközzel." },
+      "s5": { "t": "Végső jegyzőkönyv", "d": "Részletes eredmény és szakmai tanácsadás." },
+      "s6": { "t": "ITP tanúsítvány", "d": "Hivatalos műszaki érvényesítés és matrica átadása." }
+    }
+  },
+  "stats": {
+    "s1": "Vizsgált jármű",
+    "s2": "Év tapasztalat",
+    "s3": "Elégedett ügyfél"
+  },
+  "testimonials": {
+    "kicker": "Vélemények",
+    "title": "Mit mondanak ügyfeleink",
+    "items": {
+      "t1": { "n": "Kovács Attila", "r": "Személyautó tulajdonos", "q": "Gyors, precíz és barátságos csapat. Az egész folyamat fél óra alatt lezajlott. Ajánlom mindenkinek!" },
+      "t2": { "n": "Nagy Erika", "r": "Furgon tulajdonos", "q": "Régóta hozzájuk járok. Mindig korrektek, alaposak és megbízhatóak. Modern felszerelés, profi hozzáállás." },
+      "t3": { "n": "Popa Ioan", "r": "Fuvarozó vállalkozó", "q": "A teherautóim vizsgálatát mindig itt végeztetem. Rugalmasak, gyorsak és tényleg értik a szakmájukat." }
+    }
+  },
+  "faq": {
+    "kicker": "GYIK",
+    "title": "Gyakran ismételt kérdések",
+    "items": {
+      "q1": { "q": "Mennyi ideig tart egy ITP vizsgálat?", "a": "Egy átlagos személygépkocsi vizsgálata körülbelül 30 percet vesz igénybe, előzetes időpontfoglalás esetén." },
+      "q2": { "q": "Milyen dokumentumok szükségesek?", "a": "Forgalmi engedély, személyi igazolvány és az előző ITP jegyzőkönyv (ha van) szükséges a vizsgálathoz." },
+      "q3": { "q": "Kell-e előre időpontot foglalni?", "a": "Nem kötelező, de javasoljuk, mert így elkerülheti a várakozást. Foglaljon telefonon vagy űrlapunkon." },
+      "q4": { "q": "Milyen járműveket vizsgálnak?", "a": "Személyautókat, motorokat, furgonokat, teherautókat, utánfutókat és mezőgazdasági járműveket egyaránt vizsgálunk." },
+      "q5": { "q": "Mi történik, ha a jármű nem felel meg?", "a": "Részletes jegyzőkönyvet adunk a hibákról, és 30 napon belül ingyenesen visszatérhet az újbóli ellenőrzésre." },
+      "q6": { "q": "Elfogadnak kártyás fizetést?", "a": "Igen, készpénzt és bankkártyát is elfogadunk minden szolgáltatásunkért." }
+    }
+  },
+  "contact": {
+    "kicker": "Kapcsolat",
+    "title": "Vegye fel velünk a kapcsolatot",
+    "subtitle": "Kérdése van? Írjon nekünk vagy hívjon minket, örömmel segítünk.",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "address": "Cím",
+    "addressValue": "Kézdivásárhely, Kovászna megye, Románia",
+    "hours": "Nyitvatartás",
+    "hoursValue": "Hétfő – Péntek: 08:00 – 17:00\nSzombat: 09:00 – 13:00\nVasárnap: Zárva",
+    "form": {
+      "name": "Név",
+      "namePh": "Az Ön neve",
+      "email": "E-mail",
+      "emailPh": "email@example.com",
+      "phone": "Telefonszám",
+      "phonePh": "+40 700 000 000",
+      "message": "Üzenet",
+      "messagePh": "Miben segíthetünk?",
+      "submit": "Üzenet küldése",
+      "success": "Köszönjük! Hamarosan felvesszük Önnel a kapcsolatot.",
+      "errors": {
+        "name": "Kérjük adja meg a nevét",
+        "email": "Érvénytelen e-mail cím",
+        "phone": "Érvénytelen telefonszám",
+        "message": "Az üzenet túl rövid"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Professzionális ITP szolgáltatások Kézdivásárhelyen.",
+    "quickLinks": "Gyors linkek",
+    "services": "Szolgáltatások",
+    "contact": "Kapcsolat",
+    "rights": "Minden jog fenntartva.",
+    "made": "Készült szenvedéllyel"
+  },
+  "cookie": {
+    "text": "Ez a weboldal sütiket használ a felhasználói élmény javításához. A böngészés folytatásával elfogadja a sütik használatát.",
+    "accept": "Elfogadom",
+    "decline": "Elutasítom"
+  },
+  "notFound": {
+    "title": "Az oldal nem található",
+    "text": "A keresett oldal nem létezik vagy áthelyezték.",
+    "home": "Vissza a főoldalra"
+  },
+  "backToTop": "Vissza a tetejére"
+}

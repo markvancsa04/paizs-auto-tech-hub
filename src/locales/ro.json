@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre noi",
+    "services": "Servicii",
+    "why": "De ce noi",
+    "process": "Proces",
+    "contact": "Contact",
+    "appointment": "Programare",
+    "call": "Sună acum"
+  },
+  "hero": {
+    "badge": "Stație ITP autorizată",
+    "title": "ITP Profesional în Târgu Secuiesc",
+    "subtitle": "Inspecție tehnică rapidă, precisă și de încredere pentru toate tipurile de vehicule. Echipament modern și specialiști cu experiență.",
+    "cta1": "Programare",
+    "cta2": "Sună acum",
+    "scroll": "Derulează"
+  },
+  "about": {
+    "kicker": "Despre noi",
+    "title": "Stația ITP de încredere a regiunii",
+    "p1": "ITP Paizs DNS Auto SRL este de peste un deceniu în slujba șoferilor din Târgu Secuiesc și împrejurimi. Misiunea noastră este să transformăm inspecția tehnică într-o experiență rapidă, transparentă și fără stres.",
+    "p2": "Echipa noastră este formată din specialiști autorizați RAR, cu formare continuă. Cu echipamentele noastre de diagnoză de ultimă generație, deservim toate categoriile de vehicule, de la autoturisme la camioane grele.",
+    "f1t": "Misiune",
+    "f1d": "Vehicule sigure pentru drumuri sigure.",
+    "f2t": "Experiență",
+    "f2d": "Peste 10 ani de practică profesională.",
+    "f3t": "Echipament modern",
+    "f3d": "Aparate de diagnoză calibrate și actualizate.",
+    "f4t": "Inspecție certificată",
+    "f4d": "Stație autorizată RAR."
+  },
+  "services": {
+    "kicker": "Servicii",
+    "title": "Pentru orice tip de vehicul",
+    "subtitle": "Servicii ITP complete într-un singur loc, la calitate profesională.",
+    "cta": "Detalii",
+    "items": {
+      "cars": { "t": "Autoturisme", "d": "Inspecție tehnică rapidă și precisă pentru autoturisme, cu diagnoză completă." },
+      "moto": { "t": "Motociclete", "d": "Serviciu ITP dedicat motocicliștilor, cu verificarea frânelor și a emisiilor." },
+      "trucks": { "t": "Camioane", "d": "Inspecție tehnică pentru vehicule grele pe standuri moderne cu role." },
+      "trailers": { "t": "Remorci", "d": "Verificare completă a remorcilor și semiremorcilor din toate categoriile." },
+      "agri": { "t": "Vehicule agricole", "d": "ITP profesional pentru tractoare și utilaje agricole." },
+      "comm": { "t": "Vehicule comerciale", "d": "Verificare tehnică completă pentru autoutilitare și dube." }
+    }
+  },
+  "why": {
+    "kicker": "De ce să ne alegi",
+    "title": "Servicii de excelență la fiecare detaliu",
+    "items": {
+      "i1": { "t": "Specialiști cu experiență", "d": "Inspectori instruiți și autorizați RAR." },
+      "i2": { "t": "Echipament modern", "d": "Aparate de diagnoză de ultimă generație." },
+      "i3": { "t": "Inspecție rapidă", "d": "Finalizăm în medie în 30 de minute." },
+      "i4": { "t": "Prețuri corecte", "d": "Tarife transparente și competitive." },
+      "i5": { "t": "Clienți mulțumiți", "d": "98% rată de satisfacție." },
+      "i6": { "t": "Servicii de încredere", "d": "Punctualitate, precizie, profesionalism." }
+    }
+  },
+  "process": {
+    "kicker": "Proces",
+    "title": "Așa se desfășoară inspecția",
+    "steps": {
+      "s1": { "t": "Programare", "d": "Fă o programare telefonic sau online, fără așteptare." },
+      "s2": { "t": "Verificarea vehiculului", "d": "Inspecție vizuală și tehnică pentru toate componentele." },
+      "s3": { "t": "Test frâne", "d": "Diagnoză precisă a sistemului de frânare pe stand cu role." },
+      "s4": { "t": "Test emisii", "d": "Măsurare precisă a noxelor cu aparatură omologată." },
+      "s5": { "t": "Raport final", "d": "Rezultat detaliat și consiliere de specialitate." },
+      "s6": { "t": "Certificat ITP", "d": "Validare tehnică oficială și eliberare ecuson." }
+    }
+  },
+  "stats": {
+    "s1": "Vehicule inspectate",
+    "s2": "Ani de experiență",
+    "s3": "Clienți mulțumiți"
+  },
+  "testimonials": {
+    "kicker": "Testimoniale",
+    "title": "Ce spun clienții noștri",
+    "items": {
+      "t1": { "n": "Kovács Attila", "r": "Proprietar autoturism", "q": "Echipă rapidă, precisă și prietenoasă. Tot procesul a durat o jumătate de oră. Recomand cu încredere!" },
+      "t2": { "n": "Nagy Erika", "r": "Proprietar dubă", "q": "Merg la ei de mult timp. Sunt mereu corecți, atenți la detalii și de încredere. Echipament modern, atitudine profesionistă." },
+      "t3": { "n": "Popa Ioan", "r": "Transportator", "q": "Îmi verific mereu camioanele aici. Sunt flexibili, rapizi și își cunosc bine meseria." }
+    }
+  },
+  "faq": {
+    "kicker": "Întrebări frecvente",
+    "title": "Răspunsuri la întrebările tale",
+    "items": {
+      "q1": { "q": "Cât durează o inspecție ITP?", "a": "O inspecție pentru un autoturism obișnuit durează aproximativ 30 de minute, cu programare prealabilă." },
+      "q2": { "q": "Ce documente sunt necesare?", "a": "Certificat de înmatriculare, carte de identitate și raportul ITP anterior (dacă există)." },
+      "q3": { "q": "Este necesară programarea?", "a": "Nu este obligatorie, dar recomandăm programarea pentru a evita așteptarea. Sună sau folosește formularul online." },
+      "q4": { "q": "Ce tipuri de vehicule verificați?", "a": "Verificăm autoturisme, motociclete, dube, camioane, remorci și vehicule agricole." },
+      "q5": { "q": "Ce se întâmplă dacă vehiculul nu trece?", "a": "Primești un raport detaliat cu defecțiunile și te poți întoarce gratuit pentru reverificare în 30 de zile." },
+      "q6": { "q": "Acceptați plata cu cardul?", "a": "Da, acceptăm atât plata cash cât și cu cardul bancar pentru toate serviciile." }
+    }
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Contactează-ne",
+    "subtitle": "Ai o întrebare? Scrie-ne sau sună-ne, suntem bucuroși să te ajutăm.",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "address": "Adresă",
+    "addressValue": "Târgu Secuiesc, județul Covasna, România",
+    "hours": "Program",
+    "hoursValue": "Luni – Vineri: 08:00 – 17:00\nSâmbătă: 09:00 – 13:00\nDuminică: Închis",
+    "form": {
+      "name": "Nume",
+      "namePh": "Numele tău",
+      "email": "E-mail",
+      "emailPh": "email@example.com",
+      "phone": "Telefon",
+      "phonePh": "+40 700 000 000",
+      "message": "Mesaj",
+      "messagePh": "Cu ce te putem ajuta?",
+      "submit": "Trimite mesaj",
+      "success": "Mulțumim! Te vom contacta în scurt timp.",
+      "errors": {
+        "name": "Te rugăm introdu numele",
+        "email": "Adresă e-mail invalidă",
+        "phone": "Număr de telefon invalid",
+        "message": "Mesajul este prea scurt"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Servicii ITP profesionale în Târgu Secuiesc.",
+    "quickLinks": "Linkuri rapide",
+    "services": "Servicii",
+    "contact": "Contact",
+    "rights": "Toate drepturile rezervate.",
+    "made": "Realizat cu pasiune"
+  },
+  "cookie": {
+    "text": "Acest site folosește cookie-uri pentru a îmbunătăți experiența utilizatorului. Continuând navigarea, acceptați utilizarea lor.",
+    "accept": "Accept",
+    "decline": "Refuz"
+  },
+  "notFound": {
+    "title": "Pagina nu a fost găsită",
+    "text": "Pagina pe care o cauți nu există sau a fost mutată.",
+    "home": "Înapoi la pagina principală"
+  },
+  "backToTop": "Sus"
+}
