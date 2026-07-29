@@ -541,7 +541,7 @@ function Process() {
                       <h3 className="mt-1 text-lg font-semibold">{t(`process.steps.${s.k}.t`)}</h3>
                     </div>
                   </div>
-                  <p className={`mt-3 text-sm text-muted-foreground ${left ? "lg:text-right" : ""}`}>{t(`process.steps.${s.k}.d`)}</p>
+                  <p className={`mt-3 text-sm text-muted-foreground whitespace-pre-wrap ${left ? "lg:text-right" : ""}`}>{t(`process.steps.${s.k}.d`)}</p>
                 </div>
                 <div aria-hidden className="hidden lg:block" />
                 <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full lg:block" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }} />
