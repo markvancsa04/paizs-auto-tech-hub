@@ -2,15 +2,24 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  Phone, MessageCircle, ArrowUp, Menu, X, ChevronDown, Mail, MapPin, Clock, Facebook,
-  Car, Bike, Truck, Caravan, Tractor, Package,
-  ShieldCheck, Gauge, Timer, Wallet, Smile, Wrench,
+  Phone, ArrowUp, Menu, X, ChevronDown, Mail, MapPin, Clock, Facebook,
+  Car, Bike, Truck, Caravan, Tractor, Package, Cog,
+  ShieldCheck, Timer, Wallet, Smile, Wrench,
   CalendarCheck, Search, Disc3, Wind, FileCheck2, BadgeCheck,
   Send, Loader2, CheckCircle2, Globe,
 } from "lucide-react";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { Counter } from "@/components/Counter";
 import { CONTACT } from "./__root";
+import { HERO_SLIDES, HERO_SLIDE_INTERVAL_MS, SOCIAL, PHONE_CTA_HREF, SERVICE_ITEMS } from "@/lib/content";
+
+const ICONS: Record<string, any> = { Car, Bike, Truck, Caravan, Tractor, Package, Cog };
+
+/** Smooth-scroll to the contact section. Used by every "phone" CTA. */
+function scrollToContact(e?: { preventDefault: () => void }) {
+  e?.preventDefault();
+  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 export const Route = createFileRoute("/")({
   component: HomePage,
