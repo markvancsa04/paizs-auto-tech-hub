@@ -907,7 +907,7 @@ function Footer() {
         <div>
           <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">{t("footer.contact")}</div>
           <ul className="space-y-2 text-sm text-foreground/80">
-            <li className="flex items-start gap-2 whitespace-pre-wrap"><Phone className="mt-1 h-4 w-4 shrink-0 text-primary-glow" /> {CONTACT.phone}</li>
+            <li className="flex items-start gap-2 whitespace-pre-wrap"><Phone className="mt-1 h-4 w-4 shrink-0 text-primary-glow" /> {CONTACT.phoneFooter}</li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary-glow" /> {CONTACT.email}</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary-glow" /> Târgu Secuiesc</li>
           </ul>
