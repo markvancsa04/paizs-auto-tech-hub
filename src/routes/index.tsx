@@ -784,7 +784,7 @@ function Contact() {
           <div className="overflow-hidden rounded-2xl glass">
             <iframe
               title="Google Maps — Târgu Secuiesc"
-              src="https://www.google.com/maps?q=Targu+Secuiesc,+Romania&output=embed"
+              src="https://www.google.com/maps?q=ITP+Paizs+DNS+Auto+SRL,+Strada+Garii+49A,+Targu+Secuiesc,+Romania&output=embed"
               width="100%"
               height="240"
               loading="lazy"
