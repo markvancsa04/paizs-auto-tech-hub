@@ -558,8 +558,8 @@ function Process() {
 function Stats() {
   const { t } = useI18n();
   const items = [
-    { to: 5000, suffix: "+", label: "stats.s1" },
-    { to: 10, suffix: "+", label: "stats.s2" },
+    { to: 25000, suffix: "+", label: "stats.s1" },
+    { to: 25, suffix: "+", label: "stats.s2" },
     { to: 98, suffix: "%", label: "stats.s3" },
   ];
   return (
