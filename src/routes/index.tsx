@@ -960,20 +960,21 @@ function FloatingButtons() {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.2, type: "spring", stiffness: 260, damping: 20 }}
-        href={`https://wa.me/${CONTACT.whatsapp}`}
+        href={SOCIAL.facebook}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="WhatsApp"
+        aria-label="Facebook"
         className="grid h-14 w-14 place-items-center rounded-full text-white shadow-lg transition-transform hover:scale-110"
-        style={{ background: "#25D366" }}
+        style={{ background: "#1877F2" }}
       >
-        <MessageCircle className="h-6 w-6" />
+        <Facebook className="h-6 w-6" />
       </motion.a>
       <motion.a
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.35, type: "spring", stiffness: 260, damping: 20 }}
-        href={`tel:${CONTACT.phoneRaw}`}
+        href={PHONE_CTA_HREF}
+        onClick={(e) => scrollToContact(e)}
         aria-label="Call"
         className="grid h-14 w-14 place-items-center rounded-full text-primary-foreground shadow-lg transition-transform hover:scale-110"
         style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
