@@ -2,15 +2,24 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  Phone, MessageCircle, ArrowUp, Menu, X, ChevronDown, Mail, MapPin, Clock, Facebook,
-  Car, Bike, Truck, Caravan, Tractor, Package,
-  ShieldCheck, Gauge, Timer, Wallet, Smile, Wrench,
+  Phone, ArrowUp, Menu, X, ChevronDown, Mail, MapPin, Clock, Facebook,
+  Car, Bike, Truck, Caravan, Tractor, Package, Cog,
+  ShieldCheck, Timer, Wallet, Smile, Wrench,
   CalendarCheck, Search, Disc3, Wind, FileCheck2, BadgeCheck,
   Send, Loader2, CheckCircle2, Globe,
 } from "lucide-react";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { Counter } from "@/components/Counter";
 import { CONTACT } from "./__root";
+import { HERO_SLIDES, HERO_SLIDE_INTERVAL_MS, SOCIAL, PHONE_CTA_HREF, SERVICE_ITEMS } from "@/lib/content";
+
+const ICONS: Record<string, any> = { Car, Bike, Truck, Caravan, Tractor, Package, Cog };
+
+/** Smooth-scroll to the contact section. Used by every "phone" CTA. */
+function scrollToContact(e?: { preventDefault: () => void }) {
+  e?.preventDefault();
+  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -164,7 +173,8 @@ function Navbar() {
         <div className="flex items-center gap-2">
           <LangSwitcher />
           <a
-            href={`tel:${CONTACT.phoneRaw}`}
+            href={PHONE_CTA_HREF}
+            onClick={(e) => scrollToContact(e)}
             className="hidden btn-primary items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold sm:inline-flex"
           >
             <Phone className="h-4 w-4" />
@@ -200,7 +210,8 @@ function Navbar() {
                 </button>
               ))}
               <a
-                href={`tel:${CONTACT.phoneRaw}`}
+                href={PHONE_CTA_HREF}
+                onClick={(e) => { scrollToContact(e); setOpen(false); }}
                 className="btn-primary mt-2 inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
               >
                 <Phone className="h-4 w-4" />
@@ -217,31 +228,51 @@ function Navbar() {
 /* -------------------- Hero -------------------- */
 function Hero() {
   const { t } = useI18n();
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const i = setInterval(
+      () => setIdx((n) => (n + 1) % HERO_SLIDES.length),
+      HERO_SLIDE_INTERVAL_MS,
+    );
+    return () => clearInterval(i);
+  }, []);
+
   return (
     <section
       id="home"
       className="relative isolate flex min-h-dvh items-center overflow-hidden pt-24"
-      style={{ background: "var(--gradient-hero)" }}
     >
-      {/* animated orbs */}
-      <motion.div
+      {/* background slider */}
+      <div aria-hidden className="absolute inset-0 -z-20">
+        <AnimatePresence>
+          <motion.img
+            key={idx}
+            src={HERO_SLIDES[idx].src}
+            alt=""
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </AnimatePresence>
+      </div>
+      {/* dark overlay for text contrast */}
+      <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full blur-3xl"
-        style={{ background: "oklch(0.68 0.18 245 / 0.35)" }}
-        animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-40 -right-40 h-[28rem] w-[28rem] rounded-full blur-3xl"
-        style={{ background: "oklch(0.78 0.16 210 / 0.28)" }}
-        animate={{ x: [0, -30, 0], y: [0, -20, 0] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, oklch(0.15 0.04 260 / 0.85) 0%, oklch(0.12 0.05 255 / 0.75) 45%, oklch(0.08 0.04 250 / 0.92) 100%)",
+        }}
       />
       {/* grid overlay */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.05]"
+        className="absolute inset-0 -z-10 opacity-[0.05]"
         style={{
           backgroundImage:
             "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
@@ -263,25 +294,40 @@ function Hero() {
           <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="gradient-text">{t("hero.title")}</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg text-white/85 sm:text-xl">
             {t("hero.subtitle")}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#contact"
-              onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
+              href={PHONE_CTA_HREF}
+              onClick={(e) => scrollToContact(e)}
               className="btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold"
-            >
-              <CalendarCheck className="h-5 w-5" />
-              {t("hero.cta1")}
-            </a>
-            <a
-              href={`tel:${CONTACT.phoneRaw}`}
-              className="btn-ghost inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold"
             >
               <Phone className="h-5 w-5" />
               {t("hero.cta2")}
             </a>
+            <a
+              href={PHONE_CTA_HREF}
+              onClick={(e) => scrollToContact(e)}
+              className="btn-ghost inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold"
+            >
+              <CalendarCheck className="h-5 w-5" />
+              {t("hero.cta1")}
+            </a>
+          </div>
+
+          {/* slide indicators */}
+          <div className="mt-10 flex items-center gap-2">
+            {HERO_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIdx(i)}
+                aria-label={`Slide ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all ${
+                  i === idx ? "w-8 bg-primary-glow" : "w-4 bg-white/30 hover:bg-white/50"
+                }`}
+              />
+            ))}
           </div>
         </motion.div>
 
@@ -289,7 +335,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-20 hidden items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground sm:flex"
+          className="mt-16 hidden items-center gap-2 text-xs uppercase tracking-widest text-white/70 sm:flex"
         >
           <span>{t("hero.scroll")}</span>
           <motion.span animate={{ y: [0, 6, 0] }} transition={{ duration: 1.6, repeat: Infinity }}>
@@ -393,14 +439,7 @@ function About() {
 /* -------------------- Services -------------------- */
 function Services() {
   const { t } = useI18n();
-  const items = [
-    { icon: Car, k: "cars" },
-    { icon: Bike, k: "moto" },
-    { icon: Truck, k: "trucks" },
-    { icon: Caravan, k: "trailers" },
-    { icon: Tractor, k: "agri" },
-    { icon: Package, k: "comm" },
-  ];
+  const items = SERVICE_ITEMS.map((s) => ({ icon: ICONS[s.icon], k: s.key }));
   return (
     <Section id="services">
       <div className="mx-auto max-w-3xl text-center">
@@ -720,7 +759,7 @@ function Contact() {
 
       <div className="mt-16 grid gap-8 lg:grid-cols-5">
         <div className="lg:col-span-2 space-y-4">
-          <InfoRow icon={Phone} label={t("contact.phone")} value={CONTACT.phone} href={`tel:${CONTACT.phoneRaw}`} />
+          <InfoRow icon={Phone} label={t("contact.phone")} value={CONTACT.phone} />
           <InfoRow icon={Mail} label={t("contact.email")} value={CONTACT.email} href={`mailto:${CONTACT.email}`} />
           <InfoRow icon={MapPin} label={t("contact.address")} value={t("contact.addressValue")} />
           <div className="glass rounded-2xl p-5">
@@ -734,15 +773,7 @@ function Contact() {
           </div>
           <div className="flex gap-2">
             <a
-              href={`https://wa.me/${CONTACT.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
-            >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
-            </a>
-            <a
-              href="https://facebook.com"
+              href={SOCIAL.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
@@ -881,13 +912,10 @@ function Footer() {
           </div>
           <p className="mt-4 max-w-md text-sm text-muted-foreground">{t("footer.tagline")}</p>
           <div className="mt-6 flex gap-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full glass">
+            <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full glass">
               <Facebook className="h-4 w-4" />
             </a>
-            <a href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="grid h-10 w-10 place-items-center rounded-full glass">
-              <MessageCircle className="h-4 w-4" />
-            </a>
-            <a href={`tel:${CONTACT.phoneRaw}`} aria-label="Phone" className="grid h-10 w-10 place-items-center rounded-full glass">
+            <a href={PHONE_CTA_HREF} onClick={(e) => scrollToContact(e)} aria-label="Phone" className="grid h-10 w-10 place-items-center rounded-full glass">
               <Phone className="h-4 w-4" />
             </a>
           </div>
@@ -932,20 +960,21 @@ function FloatingButtons() {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.2, type: "spring", stiffness: 260, damping: 20 }}
-        href={`https://wa.me/${CONTACT.whatsapp}`}
+        href={SOCIAL.facebook}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="WhatsApp"
+        aria-label="Facebook"
         className="grid h-14 w-14 place-items-center rounded-full text-white shadow-lg transition-transform hover:scale-110"
-        style={{ background: "#25D366" }}
+        style={{ background: "#1877F2" }}
       >
-        <MessageCircle className="h-6 w-6" />
+        <Facebook className="h-6 w-6" />
       </motion.a>
       <motion.a
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.35, type: "spring", stiffness: 260, damping: 20 }}
-        href={`tel:${CONTACT.phoneRaw}`}
+        href={PHONE_CTA_HREF}
+        onClick={(e) => scrollToContact(e)}
         aria-label="Call"
         className="grid h-14 w-14 place-items-center rounded-full text-primary-foreground shadow-lg transition-transform hover:scale-110"
         style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
