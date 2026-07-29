@@ -18,8 +18,8 @@ const CONTACT = {
   phoneFooter: "+40 745 024 620-Biszak Levente\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 +40 752 780 498-Bartos Attila\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 +40 745 399 267-Paizs László",
   phoneRaw: "+40745024620",
   whatsapp: "40745024620",
-  email: "contact@itppaizs.ro",
-  address: "Târgu Secuiesc, Covasna, România",
+  email: "paizsdnsauto@gmail.com",
+  address: "Kézdivásárhely, Kovászna megye, Románia     Str.Garii, nr.49/ A",
 };
 
 function NotFoundComponent() {
