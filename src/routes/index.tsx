@@ -173,7 +173,8 @@ function Navbar() {
         <div className="flex items-center gap-2">
           <LangSwitcher />
           <a
-            href={`tel:${CONTACT.phoneRaw}`}
+            href={PHONE_CTA_HREF}
+            onClick={(e) => scrollToContact(e)}
             className="hidden btn-primary items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold sm:inline-flex"
           >
             <Phone className="h-4 w-4" />
@@ -209,7 +210,8 @@ function Navbar() {
                 </button>
               ))}
               <a
-                href={`tel:${CONTACT.phoneRaw}`}
+                href={PHONE_CTA_HREF}
+                onClick={(e) => { scrollToContact(e); setOpen(false); }}
                 className="btn-primary mt-2 inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
               >
                 <Phone className="h-4 w-4" />
@@ -226,31 +228,51 @@ function Navbar() {
 /* -------------------- Hero -------------------- */
 function Hero() {
   const { t } = useI18n();
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const i = setInterval(
+      () => setIdx((n) => (n + 1) % HERO_SLIDES.length),
+      HERO_SLIDE_INTERVAL_MS,
+    );
+    return () => clearInterval(i);
+  }, []);
+
   return (
     <section
       id="home"
       className="relative isolate flex min-h-dvh items-center overflow-hidden pt-24"
-      style={{ background: "var(--gradient-hero)" }}
     >
-      {/* animated orbs */}
-      <motion.div
+      {/* background slider */}
+      <div aria-hidden className="absolute inset-0 -z-20">
+        <AnimatePresence>
+          <motion.img
+            key={idx}
+            src={HERO_SLIDES[idx].src}
+            alt=""
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </AnimatePresence>
+      </div>
+      {/* dark overlay for text contrast */}
+      <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full blur-3xl"
-        style={{ background: "oklch(0.68 0.18 245 / 0.35)" }}
-        animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-40 -right-40 h-[28rem] w-[28rem] rounded-full blur-3xl"
-        style={{ background: "oklch(0.78 0.16 210 / 0.28)" }}
-        animate={{ x: [0, -30, 0], y: [0, -20, 0] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, oklch(0.15 0.04 260 / 0.85) 0%, oklch(0.12 0.05 255 / 0.75) 45%, oklch(0.08 0.04 250 / 0.92) 100%)",
+        }}
       />
       {/* grid overlay */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.05]"
+        className="absolute inset-0 -z-10 opacity-[0.05]"
         style={{
           backgroundImage:
             "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
@@ -272,25 +294,40 @@ function Hero() {
           <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="gradient-text">{t("hero.title")}</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg text-white/85 sm:text-xl">
             {t("hero.subtitle")}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#contact"
-              onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
+              href={PHONE_CTA_HREF}
+              onClick={(e) => scrollToContact(e)}
               className="btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold"
-            >
-              <CalendarCheck className="h-5 w-5" />
-              {t("hero.cta1")}
-            </a>
-            <a
-              href={`tel:${CONTACT.phoneRaw}`}
-              className="btn-ghost inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold"
             >
               <Phone className="h-5 w-5" />
               {t("hero.cta2")}
             </a>
+            <a
+              href={PHONE_CTA_HREF}
+              onClick={(e) => scrollToContact(e)}
+              className="btn-ghost inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold"
+            >
+              <CalendarCheck className="h-5 w-5" />
+              {t("hero.cta1")}
+            </a>
+          </div>
+
+          {/* slide indicators */}
+          <div className="mt-10 flex items-center gap-2">
+            {HERO_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIdx(i)}
+                aria-label={`Slide ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all ${
+                  i === idx ? "w-8 bg-primary-glow" : "w-4 bg-white/30 hover:bg-white/50"
+                }`}
+              />
+            ))}
           </div>
         </motion.div>
 
@@ -298,7 +335,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-20 hidden items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground sm:flex"
+          className="mt-16 hidden items-center gap-2 text-xs uppercase tracking-widest text-white/70 sm:flex"
         >
           <span>{t("hero.scroll")}</span>
           <motion.span animate={{ y: [0, 6, 0] }} transition={{ duration: 1.6, repeat: Infinity }}>
