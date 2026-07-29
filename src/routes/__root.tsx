@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { I18nProvider, useI18n } from "../lib/i18n";
+import { I18nProvider, useI18n } from "@/lib/i18n";
 
 const CONTACT = {
   phone: "+40 745 024 620-Biszak Levente\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 +40 752 780 498-Bartos Attila\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 +40 745 399 267-Paizs László",
