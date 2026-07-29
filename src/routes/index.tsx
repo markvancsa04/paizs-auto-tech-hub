@@ -439,14 +439,7 @@ function About() {
 /* -------------------- Services -------------------- */
 function Services() {
   const { t } = useI18n();
-  const items = [
-    { icon: Car, k: "cars" },
-    { icon: Bike, k: "moto" },
-    { icon: Truck, k: "trucks" },
-    { icon: Caravan, k: "trailers" },
-    { icon: Tractor, k: "agri" },
-    { icon: Package, k: "comm" },
-  ];
+  const items = SERVICE_ITEMS.map((s) => ({ icon: ICONS[s.icon], k: s.key }));
   return (
     <Section id="services">
       <div className="mx-auto max-w-3xl text-center">
