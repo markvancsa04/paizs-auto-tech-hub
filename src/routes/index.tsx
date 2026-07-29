@@ -759,7 +759,7 @@ function Contact() {
 
       <div className="mt-16 grid gap-8 lg:grid-cols-5">
         <div className="lg:col-span-2 space-y-4">
-          <InfoRow icon={Phone} label={t("contact.phone")} value={CONTACT.phone} href={`tel:${CONTACT.phoneRaw}`} />
+          <InfoRow icon={Phone} label={t("contact.phone")} value={CONTACT.phone} />
           <InfoRow icon={Mail} label={t("contact.email")} value={CONTACT.email} href={`mailto:${CONTACT.email}`} />
           <InfoRow icon={MapPin} label={t("contact.address")} value={t("contact.addressValue")} />
           <div className="glass rounded-2xl p-5">
@@ -773,15 +773,7 @@ function Contact() {
           </div>
           <div className="flex gap-2">
             <a
-              href={`https://wa.me/${CONTACT.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
-            >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
-            </a>
-            <a
-              href="https://facebook.com"
+              href={SOCIAL.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
