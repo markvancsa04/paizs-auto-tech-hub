@@ -14,9 +14,9 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider, useI18n } from "../lib/i18n";
 
 const CONTACT = {
-  phone: "+40 267 361 000",
-  phoneRaw: "+40267361000",
-  whatsapp: "40267361000",
+  phone: "+40 745 024 620-Biszak Levente\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 +40 752 780 498-Bartos Attila\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 +40 745 399 267-Paizs László",
+  phoneRaw: "+40745024620",
+  whatsapp: "40745024620",
   email: "contact@itppaizs.ro",
   address: "Târgu Secuiesc, Covasna, România",
 };
