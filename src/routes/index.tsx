@@ -912,13 +912,10 @@ function Footer() {
           </div>
           <p className="mt-4 max-w-md text-sm text-muted-foreground">{t("footer.tagline")}</p>
           <div className="mt-6 flex gap-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full glass">
+            <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full glass">
               <Facebook className="h-4 w-4" />
             </a>
-            <a href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="grid h-10 w-10 place-items-center rounded-full glass">
-              <MessageCircle className="h-4 w-4" />
-            </a>
-            <a href={`tel:${CONTACT.phoneRaw}`} aria-label="Phone" className="grid h-10 w-10 place-items-center rounded-full glass">
+            <a href={PHONE_CTA_HREF} onClick={(e) => scrollToContact(e)} aria-label="Phone" className="grid h-10 w-10 place-items-center rounded-full glass">
               <Phone className="h-4 w-4" />
             </a>
           </div>
