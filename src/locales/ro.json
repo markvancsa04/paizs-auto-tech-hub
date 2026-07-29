@@ -13,7 +13,7 @@
     "badge": "Stație ITP autorizată",
     "title": "ITP Profesional în Târgu Secuiesc",
     "subtitle": "Inspecție tehnică rapidă, precisă și de încredere pentru toate tipurile de vehicule. Echipament modern și specialiști cu experiență.",
-    "cta1": "Programare",
+    "cta1": "Contact",
     "cta2": "Sună acum",
     "scroll": "Derulează"
   },
@@ -42,7 +42,8 @@
       "trucks": { "t": "Camioane", "d": "Inspecție tehnică pentru vehicule grele pe standuri moderne cu role." },
       "trailers": { "t": "Remorci", "d": "Verificare completă a remorcilor și semiremorcilor din toate categoriile." },
       "agri": { "t": "Vehicule agricole", "d": "ITP profesional pentru tractoare și utilaje agricole." },
-      "comm": { "t": "Vehicule comerciale", "d": "Verificare tehnică completă pentru autoutilitare și dube." }
+      "comm": { "t": "Vehicule comerciale", "d": "Verificare tehnică completă pentru autoutilitare și dube." },
+      "power": { "t": "Tractoare și utilaje agricole", "d": "Inspecții tehnice pentru tractoare și utilaje agricole." }
     }
   },
   "why": {

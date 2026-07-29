@@ -42,7 +42,8 @@
       "trucks": { "t": "Teherautók", "d": "Nehéz gépjárművek műszaki vizsgálata modern görgős fékpadon." },
       "trailers": { "t": "Utánfutók", "d": "Pótkocsik és utánfutók teljes körű ellenőrzése minden kategóriában." },
       "agri": { "t": "Mezőgazdasági járművek", "d": "Traktorok és mezőgazdasági gépek szakszerű ITP vizsgálata." },
-      "comm": { "t": "Haszongépjárművek", "d": "Kisteherautók és furgonok komplett műszaki átvizsgálása." }
+      "comm": { "t": "Haszongépjárművek", "d": "Kisteherautók és furgonok komplett műszaki átvizsgálása." },
+      "power": { "t": "Erőgépek", "d": "Műszaki vizsgálat mezőgazdasági erőgépek és munkagépek számára." }
     }
   },
   "why": {
