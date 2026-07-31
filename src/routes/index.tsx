@@ -877,7 +877,7 @@ function InfoRow({ icon: Icon, label, value, href }: { icon: any; label: string;
       </div>
       <div>
         <div className="text-xs uppercase tracking-widest text-muted-foreground">{label}</div>
-        <div className="text-sm font-semibold whitespace-pre-wrap">{value}</div>
+        <div className="text-sm font-semibold whitespace-pre-line flex flex-col gap-1">{value}</div>
       </div>
     </div>
   );
