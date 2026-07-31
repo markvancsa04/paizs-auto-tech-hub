@@ -14,12 +14,12 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider, useI18n } from "@/lib/i18n";
 
 const CONTACT = {
-  phone: "`+40 752 780 498
+  phone: `+40 752 780 498
 +40 745 399 267
-+40 745 024 620`, ",
-  phoneFooter: "`+40 752 780 498
++40 745 024 620`, 
+  phoneFooter: `+40 752 780 498
 +40 745 399 267
-+40 745 024 620`, ",
++40 745 024 620`, 
   phoneRaw: "+40752780498",
   whatsapp: "40752780498",
   email: "paizsdnsauto@gmail.com",
