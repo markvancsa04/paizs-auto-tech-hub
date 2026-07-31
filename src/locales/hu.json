@@ -62,7 +62,11 @@
     "kicker": "Folyamat",
     "title": "Így zajlik a vizsgálat",
     "steps": {
-      "s1": { "t": "Időpontfoglalás", "d": "Foglaljon időpontot telefonon.\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0+40 745 399 267- Paizs László\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0+40 745 024 620- Biszak Levente\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0+40 752 780 498- Bartos Attila" },
+      "s1": { "t": "Időpontfoglalás", "d": `Foglaljon időpontot telefonon.
+
++40 752 780 498
++40 745 399 267
++40 745 024 620`
       "s2": { "t": "Jármű ellenőrzés", "d": "Vizuális és műszaki átvizsgálás minden alkatrészre kiterjedően." },
       "s3": { "t": "Féktesztelés", "d": "Görgős fékpadon mért, pontos fékrendszer diagnosztika." },
       "s4": { "t": "Emissziós teszt", "d": "Károsanyag-kibocsátás precíz mérése hitelesített eszközzel." },
